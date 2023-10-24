@@ -94,6 +94,7 @@ body {
 
 .todo-title {
   margin-block: 5px;
+  font-weight: 500;
   color: white;
 }
 .todo-description {

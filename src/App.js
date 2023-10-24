@@ -212,12 +212,16 @@ function App() {
                   <>
                     <div className="items-container" key={item.id}>
                       <div className="item">
-                        <h2 className="todo-title">Title: {item.value}</h2>
+                        <h2 className="todo-title">
+                          <strong>Title: </strong> {item.value}
+                        </h2>
                         <p className="todo-description">
-                          Description: {item.discrption}
+                          <strong>Description: </strong> {item.discrption}
                         </p>
                         <p className="date">
-                          Date: {item.date} at {item.time}
+                          <strong>Date: </strong>
+                          {item.date}
+                          <strong> at</strong> {item.time}
                         </p>
                       </div>
                       <div className="buttons-container">
