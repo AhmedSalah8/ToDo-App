@@ -271,6 +271,11 @@ function App() {
           )}
         </div>
       </div>
+      <div className="footer">
+        <span className="footer-text">
+          &copy; 2023-2028 Ahmed Salah All Rights Reserved
+        </span>
+      </div>
     </>
   );
 }
