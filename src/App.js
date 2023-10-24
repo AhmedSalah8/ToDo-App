@@ -2,8 +2,9 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 function App() {
   const body = document.querySelector("body");
-  const storedItems = JSON.parse(localStorage.getItem("items"));
-  const storedCompItems = JSON.parse(localStorage.getItem("completeditems"));
+  const storedItems = JSON.parse(localStorage.getItem("items")) || [];
+  const storedCompItems =
+    JSON.parse(localStorage.getItem("completeditems")) || [];
   const date = new Date();
   const time = date.toLocaleString("en-EG", {
     hour: "numeric",
@@ -209,8 +210,8 @@ function App() {
               {items.map((item) => {
                 return (
                   <>
-                    <div className="items-container">
-                      <div className="item" key={item.id}>
+                    <div className="items-container" key={item.id}>
+                      <div className="item">
                         <h2 className="todo-title">Title: {item.value}</h2>
                         <p className="todo-description">
                           Description: {item.discrption}
@@ -240,8 +241,8 @@ function App() {
               {completeditems.map((item) => {
                 return (
                   <>
-                    <div className="items-container">
-                      <div className="item" key={item.id}>
+                    <div className="items-container" key={item.id}>
+                      <div className="item">
                         <h2 className="todo-title completed-item">
                           Title: {item.value}
                         </h2>
